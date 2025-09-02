@@ -1,0 +1,14 @@
+Package: molbio
+Type: Package
+NeedsCompilation: no
+Title: Utilities for molecular biology
+Version: 0.0.1
+Date: 2025-09-02
+Author: David Kneis <david.kneis@tu-dresden.de>
+Maintainer: David Kneis <david.kneis@tu-dresden.de>
+Description: Provides a suite of functions to process molecular biology
+  data including, for example, DNA sequences and ddPCR measurements.
+URL: https://github.com/dkneis/molbio
+Encoding: UTF-8
+License: GPL (>= 2)
+RoxygenNote: 7.3.2
