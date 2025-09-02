@@ -1,3 +1,5 @@
+.Rbuildignore
+
 # History files
 .Rhistory
 .Rapp.history
