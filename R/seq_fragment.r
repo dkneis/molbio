@@ -80,17 +80,17 @@ seq_fragment <- function(x, avglen, circular=TRUE) {
       x 
     }
   }
-  # get the expected number of breaks
-  nbr <- stats::rpois(1, nchar(x) / avglen) - 1
-  # return original sequence in case of no breaks, build fragments otherwise
-  if (nbr <= 0) {                
+  # get the expected number of cuts (no. of cuts = no. of fragments - 1)
+  nc <- stats::rpois(1, nchar(x) / avglen) - 1
+  # return original sequence in case of no cuts, build fragments otherwise
+  if (nc <= 0) {
     x
   } else {
     x <- if (circular) break_and_rejoin(x) else x  # ensure random start point
     # convert to vector
     x <- unlist(strsplit(x, split=""))
     # perform fragmentation
-    cuts <- sample.int(n=length(x), size=nbr, replace=TRUE) # set cut positions
+    cuts <- sample.int(n=length(x), size=nc, replace=TRUE)  # set cut positions
     cuts <- sort(unique(c(0, cuts, length(x))))             # register ends too
     len <- diff(cuts)                            # length of fragments
     i <- rep(1:length(len), len)                 # vector of fragment indices

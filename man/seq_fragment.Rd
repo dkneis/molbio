@@ -9,7 +9,7 @@ seq_fragment(x, avglen, circular = TRUE)
 \arguments{
 \item{x}{The original sequence as a character string (scalar).}
 
-\item{avglen}{The expected average fragment length. This should
+\item{avglen}{The expected average fragment length (mean value). Should
 be a single number greater than zero.}
 
 \item{circular}{Logical. If \code{TRUE}, the input sequence is assumed to
