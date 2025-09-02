@@ -2,3 +2,5 @@
 
 export(ddPCR_linked_duplex)
 export(ddPCR_uniplex)
+export(fasta_read)
+export(fasta_write)
